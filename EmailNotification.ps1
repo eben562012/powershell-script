@@ -18,12 +18,12 @@ if(Test-Path $server_path ){
     $Subject = "xxxxxxxxx"
     $Body = "The files has been moved. The folder contains $file files"
     
-    $SmtpServer = "smtp.gmail.com"
+    $SmtpServer = "the company server or the server you prefer"
     $SmtpClient = New-Object Net.Mail.SmtpClient($SmtpServer, port-number)
     
     
     $SmtpClient.EnableSsl = $true
-    $SmtpClient.Credentials = New-Object System.Net.NetworkCredential("xxxxxxxx","xxxxxxxxx")
+    $SmtpClient.Credentials = New-Object System.Net.NetworkCredential("domain name","password")
     $SmtpClient.Send($sender_email, $recipient_email, $Subject, $Body)
 
 }else {
