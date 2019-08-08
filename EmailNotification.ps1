@@ -19,7 +19,7 @@ if(Test-Path $server_path ){
     $Body = "The files has been moved. The folder contains $file files"
     
     $SmtpServer = "smtp.gmail.com"
-    $SmtpClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+    $SmtpClient = New-Object Net.Mail.SmtpClient($SmtpServer, port-number)
     
     
     $SmtpClient.EnableSsl = $true
